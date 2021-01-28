@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_main_relative_textSize">20sp</dimen>
+    <dimen name="activity_main_tv_siblings_marginTop">10dp</dimen>
+    <dimen name="activity_main_tv_grandgrand_maxWidth">110dp</dimen>
+    <dimen name="activity_main_grandgrand_marginHorizontal">8dp</dimen>
+</resources>

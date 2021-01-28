@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">9.AcdHmwConstraintLayoutFamilyTree</string>
+    <string name="me">Me</string>
+    <string name="brother">Ryan Willis</string>
+    <string name="mom">Ella Nichols</string>
+    <string name="moms_brother">Spencer Bell</string>
+    <string name="moms_sister">Zara Mccarthy</string>
+    <string name="father">Sean Robinson</string>
+    <string name="father_brother">Jackson Davies</string>
+    <string name="grandFather">Edward Ward</string>
+    <string name="grandMom">Megan Atkinson</string>
+    <string name="grandFather2">Romeo Mcneil</string>
+    <string name="grandMom2">Anna Marshall</string>
+    <string name="grandgrandFather">Giancarlo Travis</string>
+    <string name="grandgrandMom">Jessica Butler</string>
+    <string name="grandgrandFather2">Damian Horton</string>
+    <string name="grandgrandMom2">Nico Valenzuela</string>
+    <string name="grandgrandFather3">Brandon Young</string>
+    <string name="grandgrandMom3">Melissa Kelly</string>
+    <string name="grandgrandFather4">Theo Reid</string>
+    <string name="grandgrandMom4">Aniyah Cantrell</string>
+</resources>

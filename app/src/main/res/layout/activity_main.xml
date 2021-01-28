@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/male"
+            android:text="@string/me"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/brother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_main_tv_siblings_marginTop"
+            android:background="@color/brother"
+            android:text="@string/brother"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="@id/me"
+            app:layout_constraintStart_toStartOf="@id/me"
+            app:layout_constraintTop_toBottomOf="@id/me" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="me, brother" />
+
+        <TextView
+            android:id="@+id/mom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/female"
+            android:text="@string/mom"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/father"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+        <TextView
+            android:id="@+id/moms_brother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_main_tv_siblings_marginTop"
+            android:background="@color/brother"
+            android:text="@string/moms_brother"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="@id/mom"
+            app:layout_constraintStart_toStartOf="@id/mom"
+            app:layout_constraintTop_toBottomOf="@id/mom"
+            app:layout_goneMarginTop="@dimen/activity_main_tv_siblings_marginTop" />
+
+        <TextView
+            android:id="@+id/moms_sister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/sister"
+            android:text="@string/moms_sister"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="@id/moms_brother"
+            app:layout_constraintStart_toStartOf="@id/moms_brother"
+            app:layout_constraintTop_toBottomOf="@id/moms_brother"
+            app:layout_goneMarginTop="@dimen/activity_main_tv_siblings_marginTop" />
+
+        <TextView
+            android:id="@+id/father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/male"
+            android:text="@string/father"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mom"
+            app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+        <TextView
+            android:id="@+id/father_brother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/brother"
+            android:text="@string/father_brother"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="@id/father"
+            app:layout_constraintStart_toStartOf="@id/father"
+            app:layout_constraintTop_toBottomOf="@id/father"
+            app:layout_goneMarginTop="@dimen/activity_main_tv_siblings_marginTop" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="mom, father, moms_brother, moms_sister" />
+
+
+        <TextView
+            android:id="@+id/grandFather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/male"
+            android:text="@string/grandFather"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandMom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+
+        <TextView
+            android:id="@+id/grandMom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/female"
+            android:text="@string/grandMom"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandFather2"
+            app:layout_constraintStart_toEndOf="@id/grandFather"
+            app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+        <TextView
+            android:id="@+id/grandFather2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/male"
+            android:text="@string/grandFather2"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandMom2"
+            app:layout_constraintStart_toEndOf="@id/grandMom"
+            app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+        <TextView
+            android:id="@+id/grandMom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/female"
+            android:text="@string/grandMom2"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/grandFather2"
+            app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="grandMom, grandMom2, grandFather, grandFather2" />
+
+        <TextView
+            android:id="@+id/grandgrandFather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/male"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandFather"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandMom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandMom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/female"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandMom"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandFather2"
+            app:layout_constraintStart_toEndOf="@id/grandgrandFather"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+
+        <TextView
+            android:id="@+id/grandgrandFather2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/male"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandFather2"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandMom2"
+            app:layout_constraintStart_toEndOf="@id/grandgrandMom"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandMom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/female"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandMom2"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandFather3"
+            app:layout_constraintStart_toEndOf="@id/grandgrandFather2"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandFather3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/male"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandFather3"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandMom3"
+            app:layout_constraintStart_toEndOf="@id/grandgrandMom2"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandMom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/female"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandMom3"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandFather4"
+            app:layout_constraintStart_toEndOf="@id/grandgrandFather3"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandFather4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/male"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandFather4"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toStartOf="@id/grandgrandMom4"
+            app:layout_constraintStart_toEndOf="@id/grandgrandMom3"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+        <TextView
+            android:id="@+id/grandgrandMom4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_main_grandgrand_marginHorizontal"
+            android:background="@color/female"
+            android:maxWidth="@dimen/activity_main_tv_grandgrand_maxWidth"
+            android:text="@string/grandgrandMom4"
+            android:textSize="@dimen/activity_main_relative_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/grandgrandFather4"
+            app:layout_constraintTop_toBottomOf="@id/barrier3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</HorizontalScrollView>
