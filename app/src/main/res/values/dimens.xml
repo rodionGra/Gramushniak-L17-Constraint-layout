@@ -4,4 +4,6 @@
     <dimen name="activity_main_tv_siblings_marginTop">10dp</dimen>
     <dimen name="activity_main_tv_grandgrand_maxWidth">110dp</dimen>
     <dimen name="activity_main_grandgrand_marginHorizontal">8dp</dimen>
+    <dimen name="activity_main_goneMarginEnd_firstSibling">300dp</dimen>
+    <dimen name="activity_main_firstSibling_goneMarginEnd">300dp</dimen>
 </resources>

@@ -67,6 +67,7 @@
             app:layout_constraintEnd_toEndOf="@id/mom"
             app:layout_constraintStart_toStartOf="@id/mom"
             app:layout_constraintTop_toBottomOf="@id/mom"
+            app:layout_goneMarginEnd="@dimen/activity_main_goneMarginEnd_firstSibling"
             app:layout_goneMarginTop="@dimen/activity_main_tv_siblings_marginTop" />
 
         <TextView
@@ -103,6 +104,7 @@
             app:layout_constraintEnd_toEndOf="@id/father"
             app:layout_constraintStart_toStartOf="@id/father"
             app:layout_constraintTop_toBottomOf="@id/father"
+            app:layout_goneMarginStart="@dimen/activity_main_firstSibling_goneMarginEnd"
             app:layout_goneMarginTop="@dimen/activity_main_tv_siblings_marginTop" />
 
         <androidx.constraintlayout.widget.Barrier
